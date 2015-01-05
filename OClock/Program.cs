@@ -19,8 +19,6 @@ namespace OClock
             
             CustomEvents.Game.OnGameLoad += Game_OnLoad;
             Game.OnGameUpdate += Game_OnUpdate;
-            Drawing.OnDraw += DrawNew;
-            Game.PrintChat(Drawing.Height.ToString());
         }
         public static void Game_OnLoad(EventArgs args)
         {
@@ -28,9 +26,6 @@ namespace OClock
 
         }
 
-        public static void DrawNew(EventArgs args)
-        {
-        }
 
         public static void Game_OnUpdate(EventArgs args)
         {
