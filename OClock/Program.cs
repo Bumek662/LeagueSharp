@@ -34,11 +34,8 @@ namespace OClock
 
         public static void Game_OnUpdate(EventArgs args)
         {
-            if (Time != DateTime.Now.ToString("HH:mm:ss"))
-            {
                 Time = DateTime.Now.ToString("HH:mm:ss");
-                Drawing.DrawText(Drawing.Width - 100, 75, System.Drawing.Color.Aqua, Time);
-            }
+                Drawing.DrawText(Drawing.Width - 100, 75, System.Drawing.Color.Goldenrod, Time);
         }
 
     }
