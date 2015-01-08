@@ -121,7 +121,7 @@ namespace StrongAmumu
 
             if (useR && Target.IsValidTarget(R.Range) && Player.CountEnemysInRange(R.Range) >= minR && R.IsReady())
             {
-                R.Cast(Target, packetCast);
+                R.Cast(Player, packetCast);
             }
         }
     }
