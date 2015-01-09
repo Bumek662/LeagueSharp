@@ -39,7 +39,6 @@ namespace StrongAmumu
             R = new Spell(SpellSlot.R, 550);
 
             Q.SetSkillshot(250f, 90, 2000, true, SkillshotType.SkillshotLine);
-            R.SetSkillshot(250f, 550, float.MaxValue, false, SkillshotType.SkillshotCircle);
 
             SpellList.Add(Q);
             SpellList.Add(W);
@@ -121,7 +120,7 @@ namespace StrongAmumu
 
             if (useR && Target.IsValidTarget(R.Range) && Player.CountEnemysInRange(R.Range) >= minR && R.IsReady())
             {
-                R.Cast(Player, packetCast);
+                R.CastIfWillHit(Player, Player.CountEnemysInRange(R.Range), packetCast);
             }
         }
     }
