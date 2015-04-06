@@ -18,7 +18,7 @@ namespace OClock
         {
             
             CustomEvents.Game.OnGameLoad += Game_OnLoad;
-            Game.OnGameUpdate += Game_OnUpdate;
+            Game.OnUpdate += Game_OnUpdate;
         }
         public static void Game_OnLoad(EventArgs args)
         {
